@@ -25,6 +25,8 @@ export const SwiperFlatList = React.forwardRef(
   // <T1 extends any>(
   (
     {
+      width,
+      height,
       vertical = false,
       children,
       data = [],
@@ -265,7 +267,7 @@ export const SwiperFlatList = React.forwardRef(
       testID: e2eID,
     };
 
-    const { width, height } = useWindowDimensions();
+    //const { width, height } = useWindowDimensions();
     if (props.getItemLayout === undefined) {
       const itemDimension = vertical ? height : width;
       flatListProps.getItemLayout = (__data, ItemIndex: number) => ({
